@@ -34,5 +34,6 @@ class CrearInstructorUseCaseTest {
         var event = (InstructorCreado) events.get(0);
         Assertions.assertEquals("Johan", event.DatosPersonales().value().nombre());
         Assertions.assertEquals("Ramirez", event.DatosPersonales().value().apellido());
+        Assertions.assertEquals("johan911019@gmail.com", event.DatosPersonales().value().email());
     }
 }

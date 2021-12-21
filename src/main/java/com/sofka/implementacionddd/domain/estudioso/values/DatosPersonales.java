@@ -41,7 +41,7 @@ public class DatosPersonales implements ValueObject<DatosPersonales.Props> {
 
             @Override
             public String email() {
-                return null;
+                return email;
             }
         };
     }
