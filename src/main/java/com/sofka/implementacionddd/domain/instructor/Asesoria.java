@@ -14,9 +14,9 @@ public class Asesoria extends Entity<AsesoriaId> {
 
     public Asesoria(AsesoriaId asesoriaId, Time duracion, Date fecha, String tema) {
         super(asesoriaId);
-        this.duracion = duracion;
-        this.fecha = fecha;
-        this.tema = tema;
+        this.duracion = Objects.requireNonNull(duracion);
+        this.fecha = Objects.requireNonNull(fecha);
+        this.tema = Objects.requireNonNull(tema);
     }
 
     public void asignarDuracion(Time duracion) {

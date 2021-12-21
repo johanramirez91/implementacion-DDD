@@ -12,5 +12,9 @@ public class Estudioso extends AggregateEvent<EstudiosoId> {
     protected Pregunta pregunta;
     protected int puntaje;
 
+    public Estudioso(EstudiosoId estudiosoId, DatosPersonales datosPersonales){
+        super(estudiosoId);
+        appendChange(new EstudiosoCreado(datosPersonales)).apply();
+    }
 
 }
