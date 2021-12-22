@@ -1,17 +1,17 @@
 package com.sofka.implementacionddd.domain.estudioso.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import com.sofka.implementacionddd.domain.curso.Curso;
+import com.sofka.implementacionddd.domain.curso.values.CursoId;
 
 public class CursoAsignado extends DomainEvent {
-    private final Curso curso;
+    private final CursoId cursoId;
 
-    public CursoAsignado(Curso curso){
+    public CursoAsignado(CursoId cursoId){
         super("sofka.implementacionddd.estudioso.cursoasignado");
-        this.curso = curso;
+        this.cursoId = cursoId;
     }
 
-    public Curso getCurso() {
-        return curso;
+    public CursoId getCurso() {
+        return cursoId;
     }
 }
